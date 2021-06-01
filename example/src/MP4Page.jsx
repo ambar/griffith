@@ -52,10 +52,17 @@ const LogoListener = () => {
   return canShowLogo && isLogoVisible ? <Logo /> : null
 }
 
-const App = () => (
-  <PlayerContainer {...props}>
-    <LogoListener />
-  </PlayerContainer>
-)
+const App = () => {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <button onClick={() => setCount(count + 1)}>{count}</button>
+      <PlayerContainer {...props}>
+        <LogoListener />
+      </PlayerContainer>
+    </>
+  )
+}
 
 export default App

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import PropTypes from 'prop-types'
 import noop from 'lodash/noop'
 import {sequence} from 'griffith-utils'
@@ -116,4 +116,4 @@ PlayerContainer.propTypes = {
   defaultQuality: PropTypes.oneOf(['ld', 'sd', 'hd', 'fhd']),
 }
 
-export default PlayerContainer
+export default memo(PlayerContainer)
